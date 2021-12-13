@@ -4,7 +4,7 @@
   vars_prompt:
     - name: "eve_keyboard_search_keycode"
       prompt: "What keycode do you want the Search key to send? (see ansible/keycodes.txt)\n"
-      default: "leftmeta"
+      default: "leftctrl"
       private: no
 
     - name: "eve_keyboard_assistant_keycode"
@@ -14,6 +14,11 @@
 
     - name: "eve_keyboard_emulate_chromebook"
       prompt: "Do you want to use Chrome top key definitions instead of F1 - F10?\n"
+      default: "yes"
+      private: no
+
+    - name: "usb_keyboard_nocaps"
+      prompt: "Do you want to enable permanent remapping of caps lock to ctrl for all USB keyboard?\n"
       default: "yes"
       private: no
 

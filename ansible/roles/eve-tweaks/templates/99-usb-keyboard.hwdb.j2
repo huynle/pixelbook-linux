@@ -1,0 +1,8 @@
+#
+# Remaps all USB keyboard for vim and tmux!!
+#
+{% if usb_keyboard_nocaps == "yes" %}
+keyboard:usb:v*p*
+
+KEYBOARD_KEY_70028=leftctrl
+{% endif %}

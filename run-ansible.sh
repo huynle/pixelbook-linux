@@ -46,4 +46,4 @@ fi
 echo "installing configuration with ansible. this may take a little while."
 echo "please enter your password when prompted."
 
-exec ansible-playbook playbook.yml -i hosts -K -e "login_user=$USER" $@
+exec ansible-playbook playbook.yml -i hosts -K -e "login_user=$USER" $@ -e 'ansible_python_interpreter=/usr/bin/python3'
