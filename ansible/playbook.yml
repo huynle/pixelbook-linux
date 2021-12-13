@@ -9,16 +9,21 @@
 
     - name: "eve_keyboard_assistant_keycode"
       prompt: "What keycode do you want the Assistant key to send? (see ansible/keycodes.txt)\n"
+      default: "fn"
+      private: no
+
+    - name: "eve_keyboard_leftctrl_keycode"
+      prompt: "What keycode do you want the left Ctrl to send? (see ansible/keycodes.txt)\n"
       default: "leftmeta"
       private: no
 
     - name: "eve_keyboard_emulate_chromebook"
       prompt: "Do you want to use Chrome top key definitions instead of F1 - F10?\n"
-      default: "yes"
+      default: "no"
       private: no
 
     - name: "usb_keyboard_nocaps"
-      prompt: "Do you want to enable permanent remapping of caps lock to ctrl for all USB keyboard?\n"
+      prompt: "Do you eenable similar remapping for all external keyboards?\n"
       default: "yes"
       private: no
 

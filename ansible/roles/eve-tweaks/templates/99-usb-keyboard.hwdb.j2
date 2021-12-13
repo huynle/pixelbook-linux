@@ -1,8 +1,24 @@
+###
+# Read this Article to help
+# https://yulistic.gitlab.io/2017/12/linux-keymapping-with-udev-hwdb/
+# https://deskthority.net/viewtopic.php?t=24076
+###
+
 #
 # Remaps all USB keyboard for vim and tmux!!
 #
 {% if usb_keyboard_nocaps == "yes" %}
 keyboard:usb:v*p*
+ KEYBOARD_KEY_70039={{ eve_keyboard_search_keycode }}
+ KEYBOARD_KEY_700e0={{ eve_keyboard_leftctrl_keycode }}
+{% endif %}
 
-KEYBOARD_KEY_70039=leftctrl
+#
+# for Logitec keyboard that uses the unifi reciever
+# we need this evdev
+#
+{% if usb_keyboard_nocaps == "yes" %}
+evdev:input:b0003v046Dp*
+ KEYBOARD_KEY_70039={{ eve_keyboard_search_keycode }}
+ KEYBOARD_KEY_700e0={{ eve_keyboard_leftctrl_keycode }}
 {% endif %}
