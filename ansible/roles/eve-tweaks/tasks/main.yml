@@ -87,6 +87,16 @@
     owner: root
     group: root
 
+### Force all USB keyboards to have capslock as ctrl
+- name: Copy keyboard hwdb file
+  become: true
+  template:
+    src: 99-usb-keyboard.hwdb.j2
+    dest: /lib/udev/hwdb.d/99-usb-keyboard.hwdb
+    mode: 0600
+    owner: root
+    group: root
+
 - name: Update hwdb to load keyboard rules
   become: true
   command: "udevadm hwdb --update"
