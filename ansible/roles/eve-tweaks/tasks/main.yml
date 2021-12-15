@@ -33,18 +33,18 @@
 
 ### tweak touchpad pressure for libinput
 
-- name: Ensure /etc/libinput exists
-  file:
-    path: /etc/libinput
-    state: directory
-    owner: root
-    mode: 0755
+# - name: Ensure /etc/libinput exists
+#   file:
+#     path: /etc/libinput
+#     state: directory
+#     owner: root
+#     mode: 0755
 
-- name: Copy libinput touchpad pressure tweak file
-  become: true
-  copy:
-    src: libinput-local-overrides.quirks
-    dest: /etc/libinput/local-overrides.quirks
+# - name: Copy libinput touchpad pressure tweak file
+#   become: true
+#   copy:
+#     src: libinput-local-overrides.quirks
+#     dest: /etc/libinput/local-overrides.quirks
 
 ### keyboard backlight
 
