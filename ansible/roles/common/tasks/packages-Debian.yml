@@ -19,6 +19,9 @@
       # Needed for mounting recovery image
       - kpartx
 
+      # for building
+      - flex
+
       # Audio / CRAS dependencies
       - acpid
       - libudev-dev

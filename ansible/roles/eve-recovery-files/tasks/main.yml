@@ -64,10 +64,12 @@
   become: true
   command: "rsync -av {{ recovery_mount_point }}/opt/google/{{ item }} /opt/google"
   with_items:
-    - disk
+    # - disk
     - dsm
     - kbl-rt5514-hotword-support 
     - touch
+    - cros-camera
+    - cr50
 
 - name: Copy all firmware files from recovery image to /lib/firmware
   become: true
@@ -79,9 +81,9 @@
     path: /usr/share/alsa/ucm
     state: directory
 
-- name: Copy the alsa UCM configuration for eve's soundcard from recovery image
-  become: true
-  command: "rsync -av {{ recovery_mount_point }}/usr/share/alsa/ucm/kbl_r5514_5663_max /usr/share/alsa/ucm"
+# - name: Copy the alsa UCM configuration for eve's soundcard from recovery image
+#   become: true
+#   command: "rsync -av {{ recovery_mount_point }}/usr/share/alsa/ucm/kbl_r5514_5663_max /usr/share/alsa/ucm"
 
 
 - name: Copy cras souncard config files from recovery image
