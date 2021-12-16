@@ -21,6 +21,8 @@
 
       # for building
       - flex
+      - libelf-dev
+      - libssl-dev
 
       # Audio / CRAS dependencies
       - acpid
