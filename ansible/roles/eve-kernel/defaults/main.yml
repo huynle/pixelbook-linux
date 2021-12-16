@@ -6,9 +6,18 @@ login_user: vagrant # override at command line with local username
 # install-kernel.yml
 force_kernel_install: false
 
-eve_kernel_name: "4.4.205chromium-gdc1f94d5"
+# eve_kernel_name: "4.4.205chromium-gdc1f94d5"
 
-eve_kernel_branch: release-R80-12739.B-chromeos-4.4
-eve_kernel_compiled_name: vmlinuz-4.4.205chromium-gdc1f94d5
-eve_kernel_config_file: eve-R80-12739.B-chromeos-4.4.config
+# eve_kernel_branch: release-R80-12739.B-chromeos-4.4
+eve_kernel_branch: chromeos-5.4
+# eve_kernel_compiled_name: vmlinuz-4.4.205chromium-gdc1f94d5
+eve_kernel_compiled_name: vmlinuz-5.4.139chromium-g330b3df0010b
+
+# download from here
+# https://dl.google.com/dl/edgedl/chromeos/recovery/chromeos_14150.87.0_eve_recovery_stable-channel_mp-v2.bin.zip
+# extract it, and get the config_file name -- follow this https://github.com/megabytefisher/eve-linux-hacks
+# script to extract config
+# https://github.com/torvalds/linux/blob/master/scripts/extract-ikconfig
+eve_kernel_config_file: eve-5.4.139-16311-chromeos-5.4.config
+# eve_kernel_config_file: eve-R80-12739.B-chromeos-4.4.config
 eve_kernel_workdir: "{{ main_workdir }}/kernel"
