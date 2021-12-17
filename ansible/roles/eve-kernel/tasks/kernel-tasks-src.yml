@@ -26,6 +26,11 @@
     src: "{{ eve_kernel_config_file }}"
     dest: "{{ eve_kernel_workdir }}/.config"
 
+- name: Apply display patch
+  command: "git am {{ eve_kernel_display_patch }}"
+  args:
+    chdir: "{{ eve_kernel_workdir }}"
+
 - name: Check if we've built the kernel already
   register: kernel_built
   stat:

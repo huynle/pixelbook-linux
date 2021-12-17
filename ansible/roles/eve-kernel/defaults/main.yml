@@ -23,3 +23,5 @@ eve_kernel_compiled_name: vmlinuz-5.4.165-g8dd901380028
 eve_kernel_config_file: eve-5.4.139-16311-chromeos-5.4.config
 # eve_kernel_config_file: eve-R80-12739.B-chromeos-4.4.config
 eve_kernel_workdir: "{{ main_workdir }}/kernel"
+
+eve_kernel_display_patch: i915-intel-display.patch
