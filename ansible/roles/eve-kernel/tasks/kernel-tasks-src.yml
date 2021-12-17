@@ -27,7 +27,8 @@
     dest: "{{ eve_kernel_workdir }}/.config"
 
 # - name: Apply display patch
-#   command: "git am {{ eve_kernel_display_patch }}"
+#   become: true
+#   command: "patch -p1 < {{ eve_kernel_display_patch }}"
 #   args:
 #     chdir: "{{ eve_kernel_workdir }}"
 

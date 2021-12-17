@@ -7,6 +7,7 @@ login_user: vagrant # override at command line with local username
 force_kernel_install: false
 
 # eve_kernel_name: "4.4.205chromium-gdc1f94d5"
+eve_kernel_name: "5.4.165chromium-g8dd901380028"
 
 # eve_kernel_branch: release-R80-12739.B-chromeos-4.4
 eve_kernel_branch: chromeos-5.4
