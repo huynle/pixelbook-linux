@@ -70,6 +70,7 @@
     - touch
     - cros-camera
     - cr50
+    - chrome
 
 - name: Copy all firmware files from recovery image to /lib/firmware
   become: true
@@ -84,7 +85,6 @@
 # - name: Copy the alsa UCM configuration for eve's soundcard from recovery image
 #   become: true
 #   command: "rsync -av {{ recovery_mount_point }}/usr/share/alsa/ucm/kbl_r5514_5663_max /usr/share/alsa/ucm"
-
 
 - name: Copy cras souncard config files from recovery image
   become: true

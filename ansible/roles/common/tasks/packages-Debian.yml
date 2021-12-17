@@ -10,7 +10,6 @@
       - python3
       - pkg-config
       - rsync
-      - bc
 
       # Touchpad
       - libgtest-dev
@@ -19,10 +18,17 @@
       # Needed for mounting recovery image
       - kpartx
 
-      # for building
+      # for building kernel
+      - git
+      - fakeroot
+      - build-essential
+      - ncurses-dev
+      - xz-utils
+      - libssl-dev
+      - bc
       - flex
       - libelf-dev
-      - libssl-dev
+      - bison
 
       # Audio / CRAS dependencies
       - acpid
