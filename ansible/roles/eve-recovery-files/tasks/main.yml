@@ -62,15 +62,16 @@
 
 - name: Copy files from /opt/google on recovery image
   become: true
-  command: "rsync -av {{ recovery_mount_point }}/opt/google/{{ item }} /opt/google"
-  with_items:
-    # - disk
-    - dsm
-    - kbl-rt5514-hotword-support 
-    - touch
-    - cros-camera
-    - cr50
-    - chrome
+  command: "rsync -av {{ recovery_mount_point }}/opt/google/ /opt/google/"
+  # command: "rsync -av {{ recovery_mount_point }}/opt/google/{{ item }} /opt/google"
+  # with_items:
+  #   # - disk
+  #   - dsm
+  #   - kbl-rt5514-hotword-support 
+  #   - touch
+  #   - cros-camera
+  #   - cr50
+  #   - chrome
 
 - name: Copy all firmware files from recovery image to /lib/firmware
   become: true
@@ -89,6 +90,10 @@
 - name: Copy cras souncard config files from recovery image
   become: true
   command: "rsync -av {{ recovery_mount_point }}/etc/cras {{ cras_etc_dir }}"
+
+- name: Copy over modprobe
+  become: true
+  command: "rsync -av {{ recovery_mount_point }}/etc/modprobe.d/ /etc/modprobe.d/"
 
 - name: Unmount recovery image
   become: true
