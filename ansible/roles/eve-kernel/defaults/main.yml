@@ -8,11 +8,13 @@ force_kernel_install: True
 
 recovery_image_version: 14150
 
-coreboot_branch: release-R94-14150.B
+# coreboot_branch: release-R94-14150.B
+coreboot_branch: release-R98-14388.B
 coreboot_workdir: "{{ main_workdir }}/coreboot"
 # eve_kernel_branch: release-R80-12739.B-chromeos-4.4
 # eve_kernel_branch: release-R98-14388.B-chromeos-5.4
-eve_kernel_branch: release-R94-14150.B-chromeos-5.4
+# eve_kernel_branch: release-R94-14150.B-chromeos-5.4
+eve_kernel_branch: release-R98-14388.B-chromeos-5.10
 
 # eve_kernel_name: "4.4.205chromium-gdc1f94d5"
 eve_kernel_name: "5.4.163-17366-gf96126e45a2b"
@@ -32,5 +34,3 @@ eve_kernel_compiled_name: "vmlinuz-{{ eve_kernel_name }}"
 eve_kernel_config_file: eve-5.4.139-16311-chromeos-5.4.config
 # eve_kernel_config_file: eve-R80-12739.B-chromeos-4.4.config
 eve_kernel_workdir: "{{ main_workdir }}/kernel"
-
-eve_kernel_display_patch: i915-intel-display.patch
