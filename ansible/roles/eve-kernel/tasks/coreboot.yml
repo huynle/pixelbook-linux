@@ -8,11 +8,11 @@
 - name: Clone coreboot firmware sources
   when: firmware_cloned.stat.exists == false
   git:
-    repo: https://chromium.googlesource.com/chromiumos/third_party/coreboot
+    repo: https://chromium.googlesource.com/chromiumos/third_party/coreboot/intel-microcode
     depth: 1
     dest: "{{ coreboot_workdir }}" 
     version: "{{ coreboot_branch }}"
 
 - name: Copy all intel microcodes files from coreboot to /lib/firmware
   become: true
-  command: "rsync -av {{ coreboot_workdir }}/intel-microcode/ /lib/firmware/"
+  command: "rsync -av {{ coreboot_workdir }}/intel-ucode /lib/firmware/"
