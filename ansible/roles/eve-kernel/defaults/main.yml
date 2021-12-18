@@ -4,19 +4,22 @@ main_workdir: /opt/eve-linux-setup
 login_user: vagrant # override at command line with local username
 
 # install-kernel.yml
-force_kernel_install: false
+force_kernel_install: true
 
-# eve_kernel_name: "4.4.205chromium-gdc1f94d5"
-eve_kernel_name: "5.4.165-g8dd901380028"
 
 coreboot_branch: release-R94-14150.B
 corebook_workdir: "{{ main_workdir }}/coreboot"
 # eve_kernel_branch: release-R80-12739.B-chromeos-4.4
 # eve_kernel_branch: release-R98-14388.B-chromeos-5.4
 eve_kernel_branch: release-R94-14150.B-chromeos-5.4
+
+# eve_kernel_name: "4.4.205chromium-gdc1f94d5"
+eve_kernel_name: "5.4.163-17366-gf96126e45a2b"
+
 # eve_kernel_compiled_name: vmlinuz-4.4.205chromium-gdc1f94d5
 # eve_kernel_compiled_name: vmlinuz-5.4.165-g8dd901380028
 eve_kernel_compiled_name: vmlinuz-5.4.163-17366-gf96126e45a2b
+
 
 
 # download from here
