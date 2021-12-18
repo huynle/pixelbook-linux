@@ -6,6 +6,11 @@
     mode: 0777
     state: directory
 
+### get coreboot stuff for kernel to build
+- name: Grab coreboot intel codes
+  when: kernel_pre_installed is failed or force_kernel_install
+  include_tasks: "coreboot.yml"
+
 #### Build & install chromium fork of linux kernel
 
 - name: check if we've cloned the kernel source yet

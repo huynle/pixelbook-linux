@@ -1,0 +1,18 @@
+#### Build & install chromium fork of linux firmware
+
+- name: check if we've cloned the firmware source yet
+  register: firmware_cloned
+  stat:
+    path: "{{ coreboot_workdir }}"
+
+- name: Clone coreboot firmware sources
+  when: firmware_cloned.stat.exists == false
+  git:
+    repo: https://chromium.googlesource.com/chromiumos/third_party/coreboot
+    depth: 1
+    dest: "{{ coreboot_workdir }}" 
+    version: "{{ coreboot_branch }}"
+
+- name: Copy all intel microcodes files from coreboot to /lib/firmware
+  become: true
+  command: "rsync -av {{ coreboot_workdir }}/intel-microcode/ /lib/firmware/"

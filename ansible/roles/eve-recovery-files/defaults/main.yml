@@ -5,6 +5,7 @@ login_user: vagrant # override at command line with local username
 
 # Go here to find latest - https://cros-updates-serving.appspot.com/
 # https://dl.google.com/dl/edgedl/chromeos/recovery/chromeos_14150.87.0_eve_recovery_stable-channel_mp-v2.bin.zip
+recovery_image_version: 14150
 
 recovery_mount_point: "{{ main_workdir }}/recovery_mnt"
 eve_recovery_image: "chromeos_14150.87.0_eve_recovery_stable-channel_mp-v2.bin"
