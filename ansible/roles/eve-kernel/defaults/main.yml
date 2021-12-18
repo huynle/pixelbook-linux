@@ -4,7 +4,7 @@ main_workdir: /opt/eve-linux-setup
 login_user: vagrant # override at command line with local username
 
 # install-kernel.yml
-force_kernel_install: true
+force_kernel_install: True
 
 
 coreboot_branch: release-R94-14150.B

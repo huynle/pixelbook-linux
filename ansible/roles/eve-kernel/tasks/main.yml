@@ -27,5 +27,5 @@
   when: grub_default_check.rc == 0
 
 - name: Set default kernel
-  when: grub_default_check.rc != 0
+  when: (grub_default_check.rc != 0) or (force_kernel_install == True)
   include_tasks: grub.yml

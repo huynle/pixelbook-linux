@@ -44,7 +44,7 @@
     path: "/boot/{{ eve_kernel_compiled_name }}"
 
 - name: Install kernel
-  when: kernel_built.stat.exists != True
+  when: (kernel_built.stat.exists != True) or (force_kernel_install == true)
   become: true
   shell: "make modules_install && make install"
   args:
