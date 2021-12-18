@@ -10,7 +10,7 @@ force_kernel_install: false
 eve_kernel_name: "5.4.165-g8dd901380028"
 
 # eve_kernel_branch: release-R80-12739.B-chromeos-4.4
-eve_kernel_branch: chromeos-5.4
+eve_kernel_branch: release-R98-14388.B-chromeos-5.4
 # eve_kernel_compiled_name: vmlinuz-4.4.205chromium-gdc1f94d5
 eve_kernel_compiled_name: vmlinuz-5.4.165-g8dd901380028
 
