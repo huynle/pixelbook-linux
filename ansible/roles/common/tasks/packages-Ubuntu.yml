@@ -13,6 +13,22 @@
       # Needed for mounting recovery image
       - kpartx
 
+      # Touchpad
+      - libgtest-dev
+      - libjsoncpp-dev
+
+      # for building kernel
+      - git
+      - fakeroot
+      - build-essential
+      - ncurses-dev
+      - xz-utils
+      - libssl-dev
+      - bc
+      - flex
+      - libelf-dev
+      - bison
+
       # Audio / CRAS dependencies
       - acpid
       - libudev-dev
