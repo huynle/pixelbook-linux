@@ -7,8 +7,14 @@
     state: directory
 
  #### Copy files from eve recovery image 
+ 
+- name: check if we've cloned the recovery image yet
+  register: recovery_cloned
+  stat:
+    path: "{{ main_workdir }}/eve-recovery.zip"
 
 - name: Download eve recovery image
+  when: recovery_cloned.stat.exists == false
   get_url:
     url: "https://dl.google.com/dl/edgedl/chromeos/recovery/{{ eve_recovery_image }}.zip"
     dest: "{{ main_workdir }}/eve-recovery.zip"

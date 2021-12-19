@@ -37,7 +37,7 @@
     path: "{{ eve_kernel_workdir }}/vmlinux"
 
 - name: Build kernel
-  when: kernel_built.stat.exists == False
+  when: (kernel_built.stat.exists == False) or  (force_kernel_install == true)
   shell: "make oldconfig && make -j15 && make -j15 modules"
   args:
     creates: "{{ eve_kernel_workdir }}/vmlinux"
