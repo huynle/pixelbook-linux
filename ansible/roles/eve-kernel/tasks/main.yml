@@ -22,9 +22,9 @@
   register: grub_default_check
   ignore_errors: true
 
-- debug:
-    msg: "Chromium kernel is already default, skipping grub setup"
-  when: grub_default_check.rc == 0
+# - debug:
+#     msg: "Chromium kernel is already default, skipping grub setup"
+#   when: grub_default_check.rc == 0
 
 - name: Set default kernel
   when: (grub_default_check.rc != 0) or (force_kernel_install == True)
