@@ -30,6 +30,7 @@ eve_kernel_compiled_name: "vmlinuz-{{ eve_kernel_name }}"
 # /opt/eve-linux-setup/recovery_mnt/lib/modules/5.4.139-16311-g330b3df0010b/kernel/kernel
 # script to extract config
 # https://github.com/torvalds/linux/blob/master/scripts/extract-ikconfig
-eve_kernel_config_file: eve-5.4.139-16311-chromeos-5.4.config
+# eve_kernel_config_file: eve-5.4.139-16311-chromeos-5.4.config
+eve_kernel_config_file: 5.10config_based_eve_5.4.config
 # eve_kernel_config_file: eve-R80-12739.B-chromeos-4.4.config
 eve_kernel_workdir: "{{ main_workdir }}/kernel"
